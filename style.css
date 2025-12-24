@@ -4,12 +4,11 @@ body {
 }
 
 .hero {
-  height: 90vh;
-  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url('hero-bedroom.jpg') center center / cover no-repeat;
+  height: 100vh;
+  position: relative;
 }
+
 
 .hero-content {
   background: rgba(255,255,255,0.9);
