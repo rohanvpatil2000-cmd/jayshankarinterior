@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayshankar Interior</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1>Design Your Dream Home</h1>
+    <p>Premium Interior & Furniture Solutions</p>
+    <button onclick="openPopup()">Get Free Consultation</button>
+  </div>
+</header>
+
+<section class="categories">
+  <div>Modular Kitchen</div>
+  <div>Bedroom</div>
+  <div>Living Room</div>
+  <div>Office Interior</div>
+</section>
+
+<section class="cta-banner">
+  <h2>Book Your Free Design Session</h2>
+  <button onclick="openPopup()">Book Now</button>
+</section>
+
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <span onclick="closePopup()" class="close">×</span>
+    <h3>Free Interior Consultation</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <select>
+        <option>Kitchen</option>
+        <option>Bedroom</option>
+        <option>Full Home</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
