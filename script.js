@@ -1,14 +1,14 @@
 function openPopup() {
-  document.getElementById("popup").style.display = "block";
+  document.getElementById("popup").style.display = "flex";
 }
 
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 
-if (!localStorage.getItem("popupShown")) {
-  setTimeout(() => {
+// AUTO POPUP after 2 seconds
+window.addEventListener("load", function () {
+  setTimeout(function () {
     openPopup();
-    localStorage.setItem("popupShown", "true");
-  }, 4000);
-}
+  }, 2000);
+});
