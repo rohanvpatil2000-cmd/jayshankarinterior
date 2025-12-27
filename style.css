@@ -6,8 +6,10 @@
 
 .hero {
   height: 100vh;
-  background: url("images/hero.jpg") center/cover no-repeat;
-  position: relative;
+  background: url("images/hero-bedroom.jpeg") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .overlay {
