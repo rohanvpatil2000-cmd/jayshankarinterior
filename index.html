@@ -8,65 +8,99 @@
 </head>
 <body>
 
+<!-- HERO -->
 <header class="hero">
+  <div class="overlay"></div>
   <div class="hero-content">
     <h1>Design Your Dream Home</h1>
-    <p>Premium Interior & Furniture Solutions</p>
+    <p>Luxury Interior Solutions Tailored for You</p>
     <button onclick="openPopup()">Get Free Consultation</button>
   </div>
 </header>
 
-<section class="categories">
-  <div>Modular Kitchen</div>
-  <div>Bedroom</div>
-  <div>Living Room</div>
-  <div>Office Interior</div>
+<!-- SERVICES -->
+<section class="services">
+  <h2>Our Interior Services</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <img src="images/kitchen.jpg">
+      <h3>Modular Kitchen</h3>
+    </div>
+    <div class="service-card">
+      <img src="images/bedroom.jpg">
+      <h3>Bedroom Design</h3>
+    </div>
+    <div class="service-card">
+      <img src="images/living.jpg">
+      <h3>Living Room</h3>
+    </div>
+    <div class="service-card">
+      <img src="images/office.jpg">
+      <h3>Office Interior</h3>
+    </div>
+  </div>
 </section>
 
-<section class="cta-banner">
-  <h2>Book Your Free Design Session</h2>
-  <button onclick="openPopup()">Book Now</button>
+<!-- WHY CHOOSE US -->
+<section class="why">
+  <h2>Why Choose Jayshankar Interior</h2>
+  <div class="why-grid">
+    <div>✔ 10+ Years Experience</div>
+    <div>✔ Premium Materials</div>
+    <div>✔ On-time Delivery</div>
+    <div>✔ 100% Client Satisfaction</div>
+  </div>
 </section>
 
+<!-- GALLERY -->
+<section class="gallery">
+  <h2>Our Recent Work</h2>
+  <div class="gallery-grid">
+    <img src="images/gallery1.jpg">
+    <img src="images/gallery2.jpg">
+    <img src="images/gallery3.jpg">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Start Your Interior Journey Today</h2>
+  <button onclick="openPopup()">Book Free Consultation</button>
+</section>
+
+<!-- POPUP FORM -->
 <div id="popup" class="popup">
   <div class="popup-box">
-    <span onclick="closePopup()" class="close">×</span>
+    <span class="close" onclick="closePopup()">×</span>
     <h3>Free Interior Consultation</h3>
-<form 
-  action="https://docs.google.com/forms/d/e/1FAIpQLSctgWBQ3Tt7OweByOmFJ3LGzN8irjxmFyGKLv-s_ooCPsr0zA/formResponse"
-  method="POST"
-  target="_blank"
->
 
-  <input
-    type="text"
-    name="entry.300483973"
-    placeholder="Your Name"
-    required
-  >
+    <form 
+      action="https://docs.google.com/forms/d/e/1FAIpQLSctgWBQ3Tt7OweByOmFJ3LGzN8irjxmFyGKLv-s_ooCPsr0zA/formResponse"
+      method="POST"
+      target="_blank"
+    >
+      <input type="text" name="entry.300483973" placeholder="Your Name" required>
+      <input type="tel" name="entry.1750376971" placeholder="Phone Number" required>
 
-  <input
-    type="tel"
-    name="entry.1750376971"
-    placeholder="Phone Number"
-    required
-  >
+      <select name="entry.2070192358">
+        <option>Kitchen</option>
+        <option>Bedroom</option>
+        <option>Living Room</option>
+        <option>Full Home</option>
+        <option>Office Interior</option>
+      </select>
 
-  <select name="entry.2070192358">
-    <option value="Kitchen">Kitchen</option>
-    <option value="Bedroom">Bedroom</option>
-    <option value="Living Room">Living Room</option>
-    <option value="Full Home">Full Home</option>
-    <option value="Office Interior">Office Interior</option>
-  </select>
-
-  <button type="submit">Submit</button>
-</form>
-
+      <button type="submit">Submit</button>
+    </form>
   </div>
 </div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Jayshankar Interior</p>
+  <p>📞 +91-XXXXXXXXXX</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-   
