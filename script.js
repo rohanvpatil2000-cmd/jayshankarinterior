@@ -1,57 +1,9 @@
-// POPUP FUNCTIONS
-function openPopup() {
-  document.getElementById("popup").style.display = "block";
-}
-
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
-}
-
-// HOMEPAGE SERVICE CARD AUTO IMAGE CHANGE
-const serviceImages = [
-  "images/hero-bedroom.jpeg",
-  "images/hero-bedroom.jpeg",
-  "images/hero-bedroom.jpeg",
-  "images/hero-bedroom.jpeg"
-];
-
-let currentServiceImage = 0;
-
-function changeServiceImages() {
-  currentServiceImage = (currentServiceImage + 1) % serviceImages.length;
-
-  const sliders = [
-    document.getElementById("kitchen-slider"),
-    document.getElementById("bedroom-slider"),
-    document.getElementById("living-slider"),
-    document.getElementById("office-slider")
-  ];
-
-  sliders.forEach(slider => {
-    if (slider) {
-      slider.src = serviceImages[currentServiceImage];
-    }
-  });
-}
-
-setInterval(changeServiceImages, 3000);
-
-// INNER PAGE IMAGE SLIDER
-const pageSlider = document.getElementById("page-slider");
-
-if (pageSlider) {
-  const pageImages = [
-    "images/hero-bedroom.jpeg",
-    "images/hero-bedroom.jpeg",
-    "images/hero-bedroom.jpeg",
-    "images/hero-bedroom.jpeg",
-    "images/hero-bedroom.jpeg"
-  ];
-
-  let currentPageImage = 0;
-
-  setInterval(() => {
-    currentPageImage = (currentPageImage + 1) % pageImages.length;
-    pageSlider.src = pageImages[currentPageImage];
-  }, 2500);
-}
+const images = ["bedroom1.jpeg", "bedroom2.jpeg", "Full cushion sofa1.jpeg", "Full cushion sofa2.jpeg", "Full cushion sofa3.jpeg", "Full cushion sofa4.jpeg", "Full cushion sofa5.jpeg", "hero-bedroom.jpeg", "Hydrulic bed.jpeg", "Hydrulic bed1.jpeg", "kitchen1.jpeg", "kitchen2.jpeg", "kitchen3.jpeg", "kitchen4.jpeg", "TV unit 1.jpeg", "TV unit 2.jpeg", "TV unit 3.jpeg", "TV unit 4.jpeg", "Wardrobe1.jpeg", "Wardrobe2.jpeg"];
+const gallery=document.getElementById('gallery');
+images.forEach(name=>{
+ const card=document.createElement('div'); card.className='card';
+ const img=document.createElement('img'); img.src='images/'+name; img.alt=name;
+ img.onerror=()=>card.remove();
+ const cap=document.createElement('div'); cap.className='caption'; cap.textContent=name;
+ card.appendChild(img); card.appendChild(cap); gallery.appendChild(card);
+});
