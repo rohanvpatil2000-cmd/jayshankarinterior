@@ -1,462 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- index-226:42-->
 <head>
-<meta charset="utf-8">
-<title>Jay Shankar Interior</title>
-<!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">   
-<!--Color Switcher Mockup-->
-<link href="css/color-switcher-design.css" rel="stylesheet">
-<!--Color Themes-->
-<link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet">
-
-<link rel="shortcut icon" href="images/js.png" type="image/x-icon">
-<link rel="icon" href="images/js.png" type="image/x-icon">
-
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jayshankar Interior offers modular kitchens, wardrobes, TV units, sofa sets, hydraulic beds, and complete interior work across India." />
+  <title>Jayshankar Interior | Home Interior Design in India</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="home-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Jayshankar Interior home">
+      <span class="brand-logo">JI</span>
+      <span>JAYSHANKAR INTERIOR</span>
+    </a>
 
-<body>
-<!--form-->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popup Form</title>
-    <style>
-        /* Background overlay */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-        }
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="#designs">Designs</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#services">Services</a>
+      <a href="#price-benefits">Benefits</a>
+      <a href="#warranty">Warranty</a>
+      <a class="nav-button" href="#enquiry">Get Free Quote</a>
+    </nav>
+  </header>
 
-        /* Popup form container */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            width: 300px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1001;
-        }
+  <main>
+    <section class="hero-section" id="top">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Premium home interiors across India</p>
+        <h1>Beautiful, practical interiors designed around your home, budget, and lifestyle.</h1>
+        <p class="hero-text">From modular kitchens and wardrobes to TV units, sofa seating, lighting, ceilings, flooring, and civil work — we handle every detail with transparent pricing and custom execution.</p>
+        <div class="hero-actions">
+          <button class="primary-button" type="button" data-open-popup>Get Free Quote</button>
+          <a class="secondary-button" href="#designs">Explore Designs</a>
+        </div>
+      </div>
+    </section>
 
-        /* Close button */
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
+    <section class="design-showcase" id="designs" aria-labelledby="designs-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Second section showcase</p>
+        <h2 id="designs-heading">Explore our interior categories</h2>
+        <p>Each section has a relevant left-side image slideshow with manual controls. Open any category to view a dedicated page with up to six automatically detected images.</p>
+      </div>
 
-        /* Form styling */
-        .popup input[type=text], .popup input[type=email], .popup textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 6px;
-            margin-bottom: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
+      <article class="showcase-row">
+        <div class="slideshow js-slideshow" data-images="Full cushion sofa1.jpeg|Full cushion sofa2.jpeg|Full cushion sofa3.jpeg|Full cushion sofa4.jpeg|Full cushion sofa5.jpeg" data-prefixes="Full cushion sofa" aria-label="Full cushion sofa image slideshow">
+          <img src="Full cushion sofa1.jpeg" alt="Full cushion sofa interior design" />
+          <button class="slide-control prev" type="button" data-slide="prev" aria-label="Previous sofa image">‹</button>
+          <button class="slide-control next" type="button" data-slide="next" aria-label="Next sofa image">›</button>
+        </div>
+        <div class="showcase-copy">
+          <span class="serial">01</span>
+          <h3>Full Cushion Sofa</h3>
+          <p>Comfortable, made-to-size sofa solutions for family rooms, lounges, and compact living areas with clean finishing and durable upholstery.</p>
+          <a class="text-link" href="sofa.html">View sofa designs</a>
+        </div>
+      </article>
 
-        .popup input[type=submit] {
-            background-color: #04AA6D;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
+      <article class="showcase-row reverse">
+        <div class="slideshow js-slideshow" data-images="TV unit 1.jpeg|TV unit 2.jpeg|TV unit 3.jpeg|TV unit 4.jpeg" data-prefixes="TV unit" aria-label="TV unit image slideshow">
+          <img src="TV unit 1.jpeg" alt="Modern TV unit interior design" />
+          <button class="slide-control prev" type="button" data-slide="prev" aria-label="Previous TV unit image">‹</button>
+          <button class="slide-control next" type="button" data-slide="next" aria-label="Next TV unit image">›</button>
+        </div>
+        <div class="showcase-copy">
+          <span class="serial">02</span>
+          <h3>TV Unit</h3>
+          <p>Stylish entertainment walls with storage, display shelves, lighting, and wire-management planning for a neat living room.</p>
+          <a class="text-link" href="tv-unit.html">View TV unit designs</a>
+        </div>
+      </article>
 
-        .popup input[type=submit]:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
-    
-    <!-- Popup Form -->
-    <div class="popup" id="popupForm">
-        <button class="close-btn" onclick="closePopup()">&times;</button>
-        <form id="form">
-            <input type="hidden" name="access_key" value="37172bb9-6719-446b-b41a-6c26018aca43">
-            
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name.." required>
+      <article class="showcase-row">
+        <div class="slideshow js-slideshow" data-images="Full cushion sofa5.jpeg|Full cushion sofa1.jpeg|TV unit 3.jpeg|TV unit 4.jpeg" data-prefixes="Living room section,Full cushion sofa,TV unit" aria-label="Living room image slideshow">
+          <img src="Full cushion sofa5.jpeg" alt="Living room interior section" />
+          <button class="slide-control prev" type="button" data-slide="prev" aria-label="Previous living room image">‹</button>
+          <button class="slide-control next" type="button" data-slide="next" aria-label="Next living room image">›</button>
+        </div>
+        <div class="showcase-copy">
+          <span class="serial">03</span>
+          <h3>Living Room Section</h3>
+          <p>Complete living room planning with coordinated seating, TV wall, panels, lighting, storage, and smooth movement space.</p>
+          <a class="text-link" href="living-room.html">View living room designs</a>
+        </div>
+      </article>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email.." required>
-            
-            <label for="contact">Contact No</label>
-            <input type="text" id="contact" name="contact" placeholder="Your contact number.." required>
+      <article class="showcase-row reverse">
+        <div class="slideshow js-slideshow" data-images="Wardrobe1.jpeg|Wardrobe2.jpeg" data-prefixes="Wardrobe" aria-label="Wardrobe image slideshow">
+          <img src="Wardrobe1.jpeg" alt="Custom wardrobe design" />
+          <button class="slide-control prev" type="button" data-slide="prev" aria-label="Previous wardrobe image">‹</button>
+          <button class="slide-control next" type="button" data-slide="next" aria-label="Next wardrobe image">›</button>
+        </div>
+        <div class="showcase-copy">
+          <span class="serial">04</span>
+          <h3>Wardrobe</h3>
+          <p>Smart wardrobes with sliding or hinged shutters, loft storage, drawers, mirrors, and premium finish options.</p>
+          <a class="text-link" href="wardrobe.html">View wardrobe designs</a>
+        </div>
+      </article>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write something.." style="height:100px" required></textarea>
+      <article class="showcase-row">
+        <div class="slideshow js-slideshow" data-images="Hydrulic bed.jpeg|Hydrulic bed1.jpeg|bedroom1.jpeg|bedroom2.jpeg|hero-bedroom.jpeg" data-prefixes="Hydrulic bed,Hydraulic bed,bedroom" aria-label="Hydraulic bed image slideshow">
+          <img src="Hydrulic bed.jpeg" alt="Hydraulic bed with storage" />
+          <button class="slide-control prev" type="button" data-slide="prev" aria-label="Previous hydraulic bed image">‹</button>
+          <button class="slide-control next" type="button" data-slide="next" aria-label="Next hydraulic bed image">›</button>
+        </div>
+        <div class="showcase-copy">
+          <span class="serial">05</span>
+          <h3>Hydraulic Bed</h3>
+          <p>Strong, easy-lift hydraulic beds that add practical storage while keeping your bedroom clean and organized.</p>
+          <a class="text-link" href="hydraulic-bed.html">View hydraulic bed designs</a>
+        </div>
+      </article>
 
-            <input type="submit" value="Submit">
-            <div id="result"></div>
-        </form>
-    </div>
+      <article class="showcase-row reverse">
+        <div class="slideshow js-slideshow" data-images="kitchen1.jpeg|kitchen2.jpeg|kitchen3.jpeg|kitchen4.jpeg" data-prefixes="kitchen,Modular kitchen" aria-label="Modular kitchen image slideshow">
+          <img src="kitchen1.jpeg" alt="Modular kitchen interior design" />
+          <button class="slide-control prev" type="button" data-slide="prev" aria-label="Previous kitchen image">‹</button>
+          <button class="slide-control next" type="button" data-slide="next" aria-label="Next kitchen image">›</button>
+        </div>
+        <div class="showcase-copy">
+          <span class="serial">06</span>
+          <h3>Modular Kitchen</h3>
+          <p>Efficient kitchen layouts with strong cabinets, practical storage, durable finishes, lighting, and easy-maintenance surfaces.</p>
+          <a class="text-link" href="kitchen.html">View modular kitchen designs</a>
+        </div>
+      </article>
+    </section>
 
-    <script>
-        // Open popup when page loads
-        window.onload = function() {
-            document.getElementById("overlay").style.display = "block";
-            document.getElementById("popupForm").style.display = "block";
-        }
+    <section class="why-section" id="why-us" aria-labelledby="why-heading">
+      <div class="section-heading light">
+        <p class="eyebrow">Trusted interior partner</p>
+        <h2 id="why-heading">Why Choose JAYSHANKAR INTERIOR IN INDIA</h2>
+      </div>
+      <div class="stats-grid">
+        <article><strong>7562+</strong><span>Delivered Homes</span></article>
+        <article><strong>150+</strong><span>Expert Interior Designers</span></article>
+        <article><strong>2</strong><span>Experience Centres</span></article>
+        <article><strong>4.6+</strong><span>CSAT</span></article>
+      </div>
+    </section>
 
-        // Close popup
-        function closePopup() {
-            document.getElementById("overlay").style.display = "none";
-            document.getElementById("popupForm").style.display = "none";
-        }
+    <section class="info-section" id="services" aria-labelledby="services-heading">
+      <div class="section-heading">
+        <p class="eyebrow">What we offer</p>
+        <h2 id="services-heading">Complete interior services under one roof</h2>
+        <button class="primary-button" type="button" data-open-popup>Get Free Quote</button>
+      </div>
+      <div class="service-grid">
+        <article><h3>Modular Kitchens</h3><p>Functional kitchen layouts with smart storage and easy-to-maintain finishes.</p></article>
+        <article><h3>Modular Wardrobes</h3><p>Custom wardrobes designed around your storage habits and room dimensions.</p></article>
+        <article><h3>Lighting</h3><p>Ambient, task, and accent lighting plans for beautiful everyday usability.</p></article>
+        <article><h3>Flooring</h3><p>Flooring selection and execution support for durable, coordinated interiors.</p></article>
+        <article><h3>Electrical Work</h3><p>Safe electrical planning for appliances, lights, switches, and concealed wiring.</p></article>
+        <article><h3>Civil Work</h3><p>Reliable civil modifications for layouts, walls, platforms, and utility needs.</p></article>
+        <article><h3>False Ceiling</h3><p>Elegant ceiling designs that improve lighting, style, and room proportion.</p></article>
+        <article><h3>Wall Design & Painting</h3><p>Textured walls, panels, colours, and painting finishes matched to your theme.</p></article>
+      </div>
+    </section>
 
-        // Handle form submission
-        document.getElementById("form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission
-            
-            const formData = new FormData(this);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-            
-            const result = document.getElementById("result");
-            result.innerHTML = "Please wait...";
-            
-            fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
-                    result.innerHTML = json.message;
-                } else {
-                    console.log(response);
-                    result.innerHTML = json.message;
-                }
-            })
-            .catch(error => {
-                console.log(error);
-                result.innerHTML = "Something went wrong!";
-            })
-            .then(function() {
-                document.getElementById("form").reset();
-                setTimeout(() => {
-                    result.style.display = "none";
-                }, 3000);
-            });
-        });
-    </script>
+    <section class="split-info" id="price-benefits" aria-labelledby="price-heading">
+      <div>
+        <p class="eyebrow">Price benefits</p>
+        <h2 id="price-heading">Transparent pricing with flexible payment support</h2>
+      </div>
+      <div class="benefit-cards">
+        <article>
+          <h3>Flexible payment options</h3>
+          <p>EMI solutions and payment schemes can be planned through leading financial partners where available, helping you manage your interior budget comfortably.</p>
+        </article>
+        <article>
+          <h3>No hidden costs</h3>
+          <p>We focus on clear, item-wise quotations so there are no unexpected last-minute additions during the project.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="split-info warranty-section" id="warranty" aria-labelledby="warranty-heading">
+      <div>
+        <p class="eyebrow">Warranty</p>
+        <h2 id="warranty-heading">Reliable support after installation</h2>
+      </div>
+      <div class="benefit-cards">
+        <article>
+          <h3>Flat 10-year warranty</h3>
+          <p>Selected modular products are supported by a flat 10-year warranty, based on product category, material, and project scope.</p>
+        </article>
+        <article>
+          <h3>Up to 1-year on-site service warranty</h3>
+          <p>Eligible on-site services such as painting, electrical, plumbing, and installation support are covered for up to 1 year.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section" id="enquiry">
+      <div class="about-card">
+        <p class="eyebrow">Start your project</p>
+        <h2>Book a free interior consultation today.</h2>
+        <p>Share your name, phone number, and requirement. Our team will help you plan the right interiors for your home.</p>
+        <button class="primary-button" type="button" data-open-popup>Open Enquiry Form</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="floating-actions" aria-label="Quick contact actions">
+    <a class="float-button call" href="tel:+919765261313" aria-label="Call Jayshankar Interior now">☎ <span>Call Now</span></a>
+    <a class="float-button whatsapp" href="https://wa.me/+919765261313" target="_blank" rel="noopener" aria-label="Chat with Jayshankar Interior on WhatsApp">☘ <span>WhatsApp</span></a>
+  </div>
+
+  <div class="popup-overlay" id="enquiry-popup" hidden>
+    <section class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button class="popup-close" type="button" data-close-popup aria-label="Close enquiry popup">×</button>
+      <p class="eyebrow">Quick enquiry</p>
+      <h2 id="popup-title">Get a free quote</h2>
+      <p class="popup-note">Name and phone number are required. Email is optional.</p>
+
+      <form id="enquiry-form" class="enquiry-form">
+        <label>
+          Full Name *
+          <input type="text" name="name" placeholder="Enter your name" required />
+        </label>
+        <label>
+          Phone Number *
+          <input type="tel" name="phone" placeholder="Enter your phone number" required />
+        </label>
+        <label>
+          Email Address
+          <input type="email" name="email" placeholder="Enter your email (optional)" />
+        </label>
+        <label>
+          Requirement
+          <select name="requirement">
+            <option>Complete Home Interior</option>
+            <option>Modular Kitchen</option>
+            <option>Modular Wardrobe</option>
+            <option>TV Unit</option>
+            <option>Full Cushion Sofa</option>
+            <option>Hydraulic Bed</option>
+            <option>Living Room Section</option>
+          </select>
+        </label>
+        <button class="primary-button" type="submit">Submit Enquiry</button>
+        <a class="form-link" href="https://docs.google.com/forms/d/1d_uRcnbtleax9MZRhC6FLLSPTw43_CeZFEFOLj0PG4w/viewform?usp=sf_link" target="_blank" rel="noopener">Open Google Form</a>
+      </form>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Jayshankar Interior. All rights reserved.</p>
+    <p><a href="tel:+919765261313">+91 97652 61313</a> · <a href="https://wa.me/+919765261313" target="_blank" rel="noopener">WhatsApp Chat</a></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-<!--form-->
-
-
-    
-
-<div class="page-wrapper">
-    <!-- Preloader -->
-    <div class="preloader"></div>
-    
-    <!-- Main Header-->
-    <header class="main-header header-style-two">
-        <!--Header Top-->
-        <div class="header-top">
-            <div class="auto-container">
-                <div class="inner-container clearfix">
-                    <div class="top-left">
-                        <ul class="contact-list clearfix">
-                            <li><i class="fa fa-volume-control-phone"></i> Jay Shankar Interior</li>
-                            <li><i class="fa fa-envelope"></i><a href="#">jayshankarinterior@gmail.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="top-right">
-                        <ul class="social-icon-four clearfix">
-                            <li><a href="https://wa.link/215ske" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="https://www.instagram.com/jay_shankar_interior?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Header Top -->
-
-        <div class="auto-container">
-            <div class="header-lower">
-                <div class="main-box clearfix">
-                    <div class="logo-box">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="images/js.png" alt="" title="" style="width: 200px; height: auto;">
-                            </a>
-                        </div>
-                    </div>
-    
-                    <div class="nav-outer clearfix">
-                        <!-- Main Menu -->
-                        <nav class="main-menu navbar-expand-md">
-                            <div class="navbar-header">
-                                <!-- Toggle Button -->      
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="icon flaticon-menu-button"></span>
-                                </button>
-                            </div>
-    
-                            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li><a href="index.html">Home</a></li>
-                                   <!-- Gallery Dropdown with Redirection -->
-                                <li class="dropdown"><a href="#">Gallery</a>
-                                    <ul>
-                                        <li><a href="service-detail.html?category=bed">Bed</a></li>
-                                        <li><a href="service-detail.html?category=kitchen">Kitchen</a></li>
-                                        <li><a href="service-detail.html?category=sofa">Sofa</a></li>
-                                        <li><a href="service-detail.html?category=tv_unit">TV Unit</a></li>
-                                        <li><a href="service-detail.html?category=wardrobe">Wardrobe</a></li>
-                                    </ul>
-                                </li>
-                                     
-                                    
-                                    
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </nav><!-- Main Menu End-->       
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
-    </header>
-    <!--End Main Header -->
-
-    <!-- Bnner Section -->
-    <section class="banner-section-two">
-        <div class="banner-carousel owl-carousel owl-theme">
-            <!-- Slide Item -->
-            <div class="slide-item" style="background-image: url(images/main-slider/image-4.jpg);">
-                <div class="auto-container">
-                    <div class="content-box">
-                       
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide Item -->
-            <div class="slide-item" style="background-image: url(images/main-slider/image-2.jpg);">
-                <div class="auto-container">
-                    <div class="content-box">
-                       
-                        
-                    </div>
-                </div>
-            </div>
-<!-- Slide Item -->
-<div class="slide-item" style="background-image: url(images/main-slider/image-5.jpg);">
-    <div class="auto-container">
-        <div class="content-box">
-           
-            
-        </div>
-    </div>
-</div>
-            <!-- Slide Item -->
-            <div class="slide-item" style="background-image: url(images/main-slider/image-3.jpg);">
-                <div class="auto-container">
-                    <div class="content-box">
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Bnner Section -->
-
-    <!-- Specialize Section -->
-    <section class="specialize-section">
-        <div class="auto-container">
-            <div class="sec-title">
-               
-                <h2>gallery</h2>
-            </div>
-            <div class="services-carousel-two owl-carousel owl-theme">
-                <!-- Service Block - Bed -->
-                <div class="service-block-two">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href="service-detail.html?category=bed"><img src="images/gallery/bed-1.jpg" alt="Bed"></a>
-                            </figure>
-                        </div>
-                        <div class="caption-box">
-                            <h3><a href="service-detail.html?category=bed">Bed</a></h3>
-                            <div class="link-box"><a href="service-detail.html?category=bed">More <i class="fa fa-angle-double-right"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Service Block - Kitchen -->
-                <div class="service-block-two">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href="service-detail.html?category=kitchen"><img src="images/gallery/kitchen-1.jpg" alt="Kitchen"></a>
-                            </figure>
-                        </div>
-                        <div class="caption-box">
-                            <h3><a href="service-detail.html?category=kitchen">Kitchen</a></h3>
-                            <div class="link-box"><a href="service-detail.html?category=kitchen">More <i class="fa fa-angle-double-right"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Service Block - Sofa -->
-                <div class="service-block-two">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href="service-detail.html?category=sofa"><img src="images/gallery/sofa-1.jpg" alt="Sofa"></a>
-                            </figure>
-                        </div>
-                        <div class="caption-box">
-                            <h3><a href="service-detail.html?category=sofa">Sofa</a></h3>
-                            <div class="link-box"><a href="service-detail.html?category=sofa">More <i class="fa fa-angle-double-right"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Service Block - TV Unit -->
-                <div class="service-block-two">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href="service-detail.html?category=tv_unit"><img src="images/gallery/tv-unit-1.jpg" alt="TV Unit"></a>
-                            </figure>
-                        </div>
-                        <div class="caption-box">
-                            <h3><a href="service-detail.html?category=tv_unit">TV Unit</a></h3>
-                            <div class="link-box"><a href="service-detail.html?category=tv_unit">More <i class="fa fa-angle-double-right"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Service Block - Wardrobe -->
-                <div class="service-block-two">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href="service-detail.html?category=wardrobe"><img src="images/gallery/wardrobe-1.jpg" alt="Wardrobe"></a>
-                            </figure>
-                        </div>
-                        <div class="caption-box">
-                            <h3><a href="service-detail.html?category=wardrobe">Wardrobe</a></h3>
-                            <div class="link-box"><a href="service-detail.html?category=wardrobe">More <i class="fa fa-angle-double-right"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            
-        </div>
-    </section>
-    <!-- End Specialize Section -->
-
-    <!-- Fun Fact And Features -->
-    <section class="fun-fact-and-features"  style="background-image: url(images/background/3.jpg);">
-        <div class="outer-box">
-            <div class="auto-container">
-                <!-- Fact Counter -->
-                <div class="fact-counter">
-                    <div class="row">
-                        <!--Column-->
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="5">0</span></div>
-                                <h4 class="counter-title">Years of <br>Experience</h4>
-                            </div>
-                        </div>
-
-                        <!--Column-->
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="237">0</span></div>
-                                <h4 class="counter-title">Project <br>Taken</h4>
-                            </div>
-                        </div>
-
-                        <!--Column-->
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="1000">0</span></div>
-                                <h4 class="counter-title">instagram <br> Follower</h4>
-                            </div>
-                        </div>
-
-                        <!--Column-->
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="12">0</span></div>
-                                <h4 class="counter-title">Awards<br>won</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Features -->
-                <div class="features">
-                    <div class="row">
-                        <!-- Feature Block -->
-                        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="icon-box"><span class="icon flaticon-decorating"></span></div>
-                                <h3><a href="service-detail.html">Perfect Design</a></h3>
-                                <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
-                                <div class="link-box"><a href="service-detail.html">Read More</a></div>
-                            </div>
-                        </div>
-
-                        <!-- Feature Block -->
-                        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="icon-box"><span class="icon flaticon-plan"></span></div>
-                                <h3><a href="service-detail.html">Carefully Planned</a></h3>
-                                <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
-                                <div class="link-box"><a href="service-detail.html">Read More</a></div>
-                         
+</html>
