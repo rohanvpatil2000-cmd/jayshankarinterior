@@ -1,126 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- index-226:42-->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jayshankar Interior | Under Maintenance</title>
+<meta charset="utf-8">
+<title>Jay Shankar Interior</title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">   
+<!--Color Switcher Mockup-->
+<link href="css/color-switcher-design.css" rel="stylesheet">
+<!--Color Themes-->
+<link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+<link rel="shortcut icon" href="images/js.png" type="image/x-icon">
+<link rel="icon" href="images/js.png" type="image/x-icon">
 
-    body{
-      background:#111;
-      color:white;
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:20px;
-      overflow:hidden;
-    }
-
-    .container{
-      max-width:700px;
-      animation:fadeIn 1.2s ease;
-    }
-
-    h1{
-      font-size:52px;
-      margin-bottom:20px;
-      color:#d4a373;
-      letter-spacing:1px;
-    }
-
-    p{
-      font-size:20px;
-      line-height:1.8;
-      color:#ddd;
-      margin-bottom:25px;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:15px 30px;
-      background:#d4a373;
-      color:white;
-      text-decoration:none;
-      border-radius:10px;
-      font-size:18px;
-      transition:0.3s ease;
-      box-shadow:0 8px 25px rgba(212,163,115,0.3);
-    }
-
-    .btn:hover{
-      background:#b87c4c;
-      transform:translateY(-3px);
-    }
-
-    .logo{
-      font-size:18px;
-      letter-spacing:5px;
-      color:#999;
-      margin-bottom:25px;
-    }
-
-    @keyframes fadeIn{
-      from{
-        opacity:0;
-        transform:translateY(20px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
-
-    @media(max-width:768px){
-
-      h1{
-        font-size:36px;
-      }
-
-      p{
-        font-size:17px;
-      }
-
-      .btn{
-        width:100%;
-      }
-    }
-  </style>
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
 
 <body>
+<!--form-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Form</title>
+    <style>
+        /* Background overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
 
-  <div class="container">
+        /* Popup form container */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+        }
 
-    <div class="logo">
-      JAYSHANKAR INTERIOR
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        /* Form styling */
+        .popup input[type=text], .popup input[type=email], .popup textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .popup input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .popup input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Popup Form -->
+    <div class="popup" id="popupForm">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <form id="form">
+            <input type="hidden" name="access_key" value="37172bb9-6719-446b-b41a-6c26018aca43">
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+            
+            <label for="contact">Contact No</label>
+            <input type="text" id="contact" name="contact" placeholder="Your contact number.." required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something.." style="height:100px" required></textarea>
+
+            <input type="submit" value="Submit">
+            <div id="result"></div>
+        </form>
     </div>
 
-    <h1>Website Under Maintenance</h1>
+    <script>
+        // Open popup when page loads
+        window.onload = function() {
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("popupForm").style.display = "block";
+        }
 
-    <p>
-      We are currently upgrading our website with premium interior
-      showcases, improved galleries, modern design features,
-      and enhanced enquiry services.
-    </p>
+        // Close popup
+        function closePopup() {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("popupForm").style.display = "none";
+        }
 
-    <p>
-      Our new experience will be live shortly.
-    </p>
-
-    <a href="https://wa.me/919765261313" class="btn">
-      Contact on WhatsApp
-    </a>
-
-  </div>
-
+        // Handle form submission
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            const formData = new FormData(this);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            
+            const result = document.getElementById("result");
+            result.innerHTML = "Please wait...";
+            
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .then(function() {
+                document.getElementById("form").reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
+        });
+    </script>
 </body>
-</html>
+<!--form-->
+
+
+    
+
+<div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader"></div>
+    
+    <!-- Main Header-->
+    <header class="main-header header-style-two">
+        <!--Header Top-->
+        <div class="header-top">
+            <div class="auto-container">
+                <div class="inner-container clearfix">
+                    <div class="top-left">
+                        <ul class="contact-list clearfix">
+                            <li><i class="fa fa-volume-control-phone"></i> Jay Shankar Interior</li>
+                            <li><i class="fa fa-envelope"></i><a href="#">jayshankarinterior@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="top-right">
+                        <ul class="social-icon-four clearfix">
+                            <li><a href="https://wa.link/215ske" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/jay_shankar_interior?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Top -->
+
+        <div class="auto-container">
+            <div class="header-lower">
+                <div class="main-box clearfix">
+                    <div class="logo-box">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="images/js.png" alt="" title="" style="width: 200px; height: auto;">
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->      
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon flaticon-menu-button"></span>
+                                </button>
+                            </div>
+    
+                            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li><a href="index.html">Home</a></li>
+                                   <!-- Gallery Dropdown with Redirection -->
+                                <li class="dropdown"><a href="#">Gallery</a>
+                                    <ul>
+                                        <li><a href="service-detail.html?category=bed">Bed</a></li>
+                                        <li><a href="service-detail.html?category=kitchen">Kitchen</a></li>
+                                        <li><a href="service-detail.html?category=sofa">Sofa</a></li>
+                                        <li><a href="service-detail.html?category=tv_unit">TV Unit</a></li>
+                                        <li><a href="service-detail.html?category=wardrobe">Wardrobe</a></li>
+                                    </ul>
+                                </li>
+                                     
+                                    
+                                    
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav><!-- Main Menu End-->       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </header>
+    <!--End Main Header -->
+
+    <!-- Bnner Section -->
+    <section class="banner-section-two">
+        <div class="banner-carousel owl-carousel owl-theme">
+            <!-- Slide Item -->
+            <div class="slide-item" style="background-image: url(images/main-slider/image-4.jpg);">
+                <div class="auto-container">
+                    <div class="content-box">
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Item -->
+            <div class="slide-item" style="background-image: url(images/main-slider/image-2.jpg);">
+                <div class="auto-container">
+                    <div class="content-box">
+                       
+                        
+                    </div>
+                </div>
+            </div>
+<!-- Slide Item -->
+<div class="slide-item" style="background-image: url(images/main-slider/image-5.jpg);">
+    <div class="auto-container">
+        <div class="content-box">
+           
+            
+        </div>
+    </div>
+</div>
+            <!-- Slide Item -->
+            <div class="slide-item" style="background-image: url(images/main-slider/image-3.jpg);">
+                <div class="auto-container">
+                    <div class="content-box">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Bnner Section -->
+
+    <!-- Specialize Section -->
+    <section class="specialize-section">
+        <div class="auto-container">
+            <div class="sec-title">
+               
+                <h2>gallery</h2>
+            </div>
+            <div class="services-carousel-two owl-carousel owl-theme">
+                <!-- Service Block - Bed -->
+                <div class="service-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image">
+                                <a href="service-detail.html?category=bed"><img src="images/gallery/bed-1.jpg" alt="Bed"></a>
+                            </figure>
+                        </div>
+                        <div class="caption-box">
+                            <h3><a href="service-detail.html?category=bed">Bed</a></h3>
+                            <div class="link-box"><a href="service-detail.html?category=bed">More <i class="fa fa-angle-double-right"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Service Block - Kitchen -->
+                <div class="service-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image">
+                                <a href="service-detail.html?category=kitchen"><img src="images/gallery/kitchen-1.jpg" alt="Kitchen"></a>
+                            </figure>
+                        </div>
+                        <div class="caption-box">
+                            <h3><a href="service-detail.html?category=kitchen">Kitchen</a></h3>
+                            <div class="link-box"><a href="service-detail.html?category=kitchen">More <i class="fa fa-angle-double-right"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Service Block - Sofa -->
+                <div class="service-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image">
+                                <a href="service-detail.html?category=sofa"><img src="images/gallery/sofa-1.jpg" alt="Sofa"></a>
+                            </figure>
+                        </div>
+                        <div class="caption-box">
+                            <h3><a href="service-detail.html?category=sofa">Sofa</a></h3>
+                            <div class="link-box"><a href="service-detail.html?category=sofa">More <i class="fa fa-angle-double-right"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Service Block - TV Unit -->
+                <div class="service-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image">
+                                <a href="service-detail.html?category=tv_unit"><img src="images/gallery/tv-unit-1.jpg" alt="TV Unit"></a>
+                            </figure>
+                        </div>
+                        <div class="caption-box">
+                            <h3><a href="service-detail.html?category=tv_unit">TV Unit</a></h3>
+                            <div class="link-box"><a href="service-detail.html?category=tv_unit">More <i class="fa fa-angle-double-right"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Service Block - Wardrobe -->
+                <div class="service-block-two">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image">
+                                <a href="service-detail.html?category=wardrobe"><img src="images/gallery/wardrobe-1.jpg" alt="Wardrobe"></a>
+                            </figure>
+                        </div>
+                        <div class="caption-box">
+                            <h3><a href="service-detail.html?category=wardrobe">Wardrobe</a></h3>
+                            <div class="link-box"><a href="service-detail.html?category=wardrobe">More <i class="fa fa-angle-double-right"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </section>
+    <!-- End Specialize Section -->
+
+    <!-- Fun Fact And Features -->
+    <section class="fun-fact-and-features"  style="background-image: url(images/background/3.jpg);">
+        <div class="outer-box">
+            <div class="auto-container">
+                <!-- Fact Counter -->
+                <div class="fact-counter">
+                    <div class="row">
+                        <!--Column-->
+                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                            <div class="count-box">
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="5">0</span></div>
+                                <h4 class="counter-title">Years of <br>Experience</h4>
+                            </div>
+                        </div>
+
+                        <!--Column-->
+                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="count-box">
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="237">0</span></div>
+                                <h4 class="counter-title">Project <br>Taken</h4>
+                            </div>
+                        </div>
+
+                        <!--Column-->
+                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
+                            <div class="count-box">
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="1000">0</span></div>
+                                <h4 class="counter-title">instagram <br> Follower</h4>
+                            </div>
+                        </div>
+
+                        <!--Column-->
+                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
+                            <div class="count-box">
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="12">0</span></div>
+                                <h4 class="counter-title">Awards<br>won</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="features">
+                    <div class="row">
+                        <!-- Feature Block -->
+                        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="icon-box"><span class="icon flaticon-decorating"></span></div>
+                                <h3><a href="service-detail.html">Perfect Design</a></h3>
+                                <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+                                <div class="link-box"><a href="service-detail.html">Read More</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Feature Block -->
+                        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="icon-box"><span class="icon flaticon-plan"></span></div>
+                                <h3><a href="service-detail.html">Carefully Planned</a></h3>
+                                <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+                                <div class="link-box"><a href="service-detail.html">Read More</a></div>
+                         
